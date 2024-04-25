@@ -1,0 +1,18 @@
+#sidebar {
+  padding: 0;
+}
+
+.custom {
+  padding: 15px;
+  color: #212529;
+}
+
+.custom:hover {
+  padding: 15px;
+  color: white;
+  background-color: #2691d9;
+}
+
+.bg {
+  background-color: #2691d9;
+}
