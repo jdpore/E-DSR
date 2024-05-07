@@ -352,7 +352,11 @@ foreach ($unit_list as $unit) {
                             $weekTotal += ($event['duration'] + $callCount['num_calls']);
                             $weekTarget += 8;
                             $eachPercent[] = calculateCompletionRatio(4, 8);
-                            echo "<td class='dayCalls' style='background-color: #92d050'>" . $event['type'] . "</td>";
+                            if ($event['duration'] == 8) {
+                                echo "<td class='dayCalls' style='background-color: #92d050'>" . $event['type'] . "</td>";
+                            } else {
+                                echo "<td class='dayCalls' style='background-color: #92d050'>" . $event['type'] . " " . $event['duration'] . "/hrs<br>" . "Number of Calls: " . $callCount['num_calls'] . "</td>";
+                            }
                         } elseif ($leaveDuration === null) {
                             // No leave, fetch call count
                             $callCount = fetchCallCount($conn, $userName, $date);
@@ -365,7 +369,7 @@ foreach ($unit_list as $unit) {
                             $weekTotal += (4 + $callCount['num_calls']);
                             $weekTarget += 8;
                             $eachPercent[] = calculateCompletionRatio(4, 8);
-                            echo "<td class='dayCalls' style='background-color: #92d050'>Leave Half Day</td>";
+                            echo "<td class='dayCalls' style='background-color: #92d050'>Leave Half Day<br>" . "Number of Calls: " . $callCount['num_calls'] ."</td>";
                         } else {
                             // Full-day leave
                             $weekTotal += 8;

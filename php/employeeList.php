@@ -28,7 +28,9 @@ $unit_list = [
     'BRANCH - BACOLOD',
     'BRANCH - CEBU',
     'BRANCH - ILO-ILO',
-    'BRANCH - CDO'
+    'BRANCH - CDO',
+    'BRANCH - DUMAGUETE',
+    'BRANCH - GENSAN'
 ];
 
 

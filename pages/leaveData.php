@@ -158,13 +158,22 @@ if (isset($_GET['table'])) {
                                             <select class="form-select" id="branch" name="branch" required>
                                                 <option value="" disabled selected>Select Branch</option>
                                                 <option value="All">All</option>
-                                                <?php
-                                                $branchData = "SELECT DISTINCT branch FROM users";
-                                                $branchResult = mysqli_query($conn, $branchData);
-                                                foreach ($branchResult as $branchRow) {
-                                                    echo "<option value='" . $branchRow['branch'] . "'>" . $branchRow['branch'] . "</option>";
-                                                }
-                                                ?>
+                                                <option value="Main Office">Main Office</option>
+                                                <option value="Angeles">Angeles</option>
+                                                <option value="Batangas">Batangas</option>
+                                                <option value="Cabanatuan">Cabanatuan</option>
+                                                <option value="La Union">La Union</option>
+                                                <option value="Naga">Naga</option>
+                                                <option value="Subic">Subic</option>
+                                                <option value="Bacolod">Bacolod</option>
+                                                <option value="Cebu">Cebu</option>
+                                                <option value="Dumaguete">Dumaguete</option>
+                                                <option value="Iloilo">Iloilo</option>
+                                                <option value="Tacloban">Tacloban</option>
+                                                <option value="Cagayan De Oro">Cagayan De Oro</option>
+                                                <option value="Davao">Davao</option>
+                                                <option value="Gensan">Gensan</option>
+                                                <option value="Zamboanga">Zamboanga</option>
 
                                             </select>
                                             <label for="holidayDate" class="form-label">Date of Holiday

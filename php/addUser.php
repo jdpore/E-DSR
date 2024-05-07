@@ -3,7 +3,6 @@ include('db_conn.php');
 include('userList.php');
 
 if (isset($_POST['addUser'])) {
-    $id = $userCount + 1;
     $name = $_POST['name'];
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -15,7 +14,7 @@ if (isset($_POST['addUser'])) {
     $status = "New";
     $branch = $_POST['branch'];
 
-    $sql = "INSERT INTO users (id, name, user_id, 
+    $sql = "INSERT INTO users (name, user_id, 
             password, dept, category, log_at, pass_change, 
             stat, branch)
             VALUES ('$id', '$name', '$username', '$hashedPassword', 
