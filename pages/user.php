@@ -1,6 +1,6 @@
 <?php
-include('../php/autoRedirect.php');
-include('../php/userList.php');
+include ('../php/autoRedirect.php');
+include ('../php/userList.php');
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +48,7 @@ include('../php/userList.php');
     <!-- Sidebar -->
     <div class="container-fluid">
         <div class="row">
-        <?php include ('sidebar.php'); ?>
+            <?php include ('sidebar.php'); ?>
 
             <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 p-0 overflow-auto" style="height: 88vh">
@@ -139,6 +139,43 @@ include('../php/userList.php');
                                             </select>
                                         </div>
                                         <div class="col-md-6">
+                                            <label for="subDepartment" class="form-label">Sub Department</label>
+                                            <select id="subDepartment" name="subDepartment" class="form-select"
+                                                required>
+                                                <option value="N/A" selected disabled>Choose...</option>
+                                                <option value="PP SALES">PP SALES</option>
+                                                <option value="OP MFP">OP MFP</option>
+                                                <option value="OP RISO">OP RISO</option>
+                                                <option value="OP CONSUMABLES SALES">OP CONSUMABLES SALES</option>
+                                                <option value="FURNITURE">FURNITURE</option>
+                                                <option value="RENTAL SALES - MAKATI/BGC">RENTAL SALES - MAKATI/BGC
+                                                </option>
+                                                <option value="RENTAL SALES - SOUTH MANILA">RENTAL SALES - SOUTH MANILA
+                                                </option>
+                                                <option value="RENTAL SALES - QC/ORTIGAS">RENTAL SALES - QC/ORTIGAS
+                                                </option>
+                                                <option value="BRANCH - LA UNION">BRANCH - LA UNION</option>
+                                                <option value="BRANCH - ANGELES">BRANCH - ANGELES</option>
+                                                <option value="BRANCH - CABANATUAN">BRANCH - CABANATUAN</option>
+                                                <option value="BRANCH - BACOLOD">BRANCH - BACOLOD</option>
+                                                <option value="BRANCH - CEBU">BRANCH - CEBU</option>
+                                                <option value="BRANCH - ILO-ILO">BRANCH - ILO-ILO</option>
+                                                <option value="BRANCH - CDO">BRANCH - CDO</option>
+                                                <option value="BRANCH - DUMAGUETE">BRANCH - DUMAGUETE</option>
+                                                <option value="BRANCH - GENSAN">BRANCH - GENSAN</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="role" class="form-label">Role</label>
+                                            <select id="role" name="role" class="form-select">
+                                                <option value="N/A" selected disabled>Choose...</option>
+                                                <option value="User">User</option>
+                                                <option value="Team Leader">Team Leader</option>
+                                                <option value="Manager">Manager</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-6">
                                             <label for="passwordChange" class="form-label">Change Password?</label>
                                             <select id="passwordChange" name="passwordChange" class="form-select"
                                                 required>
@@ -161,7 +198,7 @@ include('../php/userList.php');
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="editUserLabel">Add User</h5>
+                                    <h5 class="modal-title" id="editUserLabel">Edit User</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
@@ -241,6 +278,43 @@ include('../php/userList.php');
                                                 <option value="Admin">Admin</option>
                                             </select>
                                         </div>
+                                        <div class="col-md-6">
+                                            <label for="editSubDepartment" class="form-label">Sub Department</label>
+                                            <select id="editSubDepartment" name="editSubDepartment" class="form-select"
+                                                required>
+                                                <option value="N/A" selected disabled>Choose...</option>
+                                                <option value="PP SALES">PP SALES</option>
+                                                <option value="OP MFP">OP MFP</option>
+                                                <option value="OP RISO">OP RISO</option>
+                                                <option value="OP CONSUMABLES SALES">OP CONSUMABLES SALES</option>
+                                                <option value="FURNITURE">FURNITURE</option>
+                                                <option value="RENTAL SALES - MAKATI/BGC">RENTAL SALES - MAKATI/BGC
+                                                </option>
+                                                <option value="RENTAL SALES - SOUTH MANILA">RENTAL SALES - SOUTH MANILA
+                                                </option>
+                                                <option value="RENTAL SALES - QC/ORTIGAS">RENTAL SALES - QC/ORTIGAS
+                                                </option>
+                                                <option value="BRANCH - LA UNION">BRANCH - LA UNION</option>
+                                                <option value="BRANCH - ANGELES">BRANCH - ANGELES</option>
+                                                <option value="BRANCH - CABANATUAN">BRANCH - CABANATUAN</option>
+                                                <option value="BRANCH - BACOLOD">BRANCH - BACOLOD</option>
+                                                <option value="BRANCH - CEBU">BRANCH - CEBU</option>
+                                                <option value="BRANCH - ILO-ILO">BRANCH - ILO-ILO</option>
+                                                <option value="BRANCH - CDO">BRANCH - CDO</option>
+                                                <option value="BRANCH - DUMAGUETE">BRANCH - DUMAGUETE</option>
+                                                <option value="BRANCH - GENSAN">BRANCH - GENSAN</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="editRole" class="form-label">Role</label>
+                                            <select id="editRole" name="editRole" class="form-select">
+                                                <option value="N/A" selected disabled>Choose...</option>
+                                                <option value="User">User</option>
+                                                <option value="Team Leader">Team Leader</option>
+                                                <option value="Manager">Manager</option>
+                                            </select>
+                                        </div>
+
                                         <div class="col-md-6">
                                             <label for="editPasswordChange" class="form-label">Change Password?</label>
                                             <select id="editPasswordChange" name="editPasswordChange"

@@ -1,5 +1,5 @@
 <?php
-include('db_conn.php');
+include ('db_conn.php');
 if (isset($_POST['editUser'])) {
     $editId = $_POST['editId'];
     $editName = $_POST['editName'];
@@ -39,10 +39,10 @@ if (isset($_POST['editUser'])) {
 
 if (isset($_GET['id'])) {
     $userId = $_GET['id'];
-    $stmt = $conn->prepare("SELECT name, user_id, password, dept, category, pass_change, branch FROM users WHERE id = ?");
+    $stmt = $conn->prepare("SELECT name, user_id, password, dept, category, pass_change, branch, authority, handled FROM users WHERE id = ?");
     $stmt->bind_param("i", $userId);
     $stmt->execute();
-    $stmt->bind_result($name, $user_id, $password, $dept, $category, $pass_change, $branch);
+    $stmt->bind_result($name, $user_id, $password, $dept, $category, $pass_change, $branch, $authority, $handled);
     if ($stmt->fetch()) {
         // Include userId in the array
         $userArray = array(
@@ -52,7 +52,9 @@ if (isset($_GET['id'])) {
             'dept' => $dept,
             'category' => $category,
             'pass_change' => $pass_change,
-            'branch' => $branch
+            'branch' => $branch,
+            'authority' => $authority,
+            'handled' => $handled
         );
         echo json_encode($userArray);
     } else {
